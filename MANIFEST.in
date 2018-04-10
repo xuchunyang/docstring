@@ -1,0 +1,2 @@
+graft docstring/templates
+graft docstring/static

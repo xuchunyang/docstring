@@ -1,3 +1,4 @@
+import os
 from flask import Flask, url_for, request, abort, render_template
 app = Flask(__name__)
 
@@ -22,7 +23,7 @@ def split(line):
     name = name[1:]
     return (name, (typ, doc))
 
-with open('DOC') as f:
+with open(os.path.join(app.root_path, 'DOC')) as f:
     x = f.read()
     l = x.split(sep="\u001F")
     d = dict([split(i) for i in l if i])
