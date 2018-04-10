@@ -27,3 +27,6 @@ with open(os.path.join(app.root_path, 'DOC')) as f:
     x = f.read()
     l = x.split(sep="\u001F")
     d = dict([split(i) for i in l if i])
+
+port = int(os.environ.get('PORT', 5000))
+app.run(host='0.0.0.0', port=port)

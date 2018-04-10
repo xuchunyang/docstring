@@ -1,1 +1,1 @@
-web: FLASK_APP=docstring FLASK_DEBUG=true flask run --host=0.0.0.0
+web: python docstring/docstring.py
