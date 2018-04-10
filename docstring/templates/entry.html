@@ -1,5 +1,12 @@
 {% extends "layout.html" %}
 {% block title %}{{ name }}{% endblock %}
+{% block head %}
+  <meta property="og:type"   content="article" />
+  <meta property="og:title"  content="{{ name }}" />
+  <meta property="og:url"    content="{{ request.base_url }}" />
+  <meta property="og:description" content="{{ doc }}" />
+  <meta property="og:site_name" content="Elisp docstring" />
+{% endblock %}
 {% block content %}
 <pre>{{ doc }}</pre>
 {% endblock %}
